@@ -12,12 +12,11 @@ class App extends React.Component {
   state = {
     generatedNumber: generateRandomNumber(),
     guess: undefined,
-    allGuess: [],
+    allGuesses: [],
     attempt: 0,
   }
 
   updateAppState = (guess) => {
-
     const absDiff = Math.abs(guess - this.state.generatedNumber);
 
     this.setState(prevState => ({
@@ -35,7 +34,7 @@ class App extends React.Component {
       <li key={index}>
         <span>{item.guess}</span>
       </li>
-    ))
+    ));
 
     return (
       <Grid container style={{ height: '100vh' }} justify="center" alignitems="center">
